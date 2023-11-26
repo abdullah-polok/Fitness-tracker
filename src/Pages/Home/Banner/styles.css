@@ -5,6 +5,7 @@
 
 .image {
   transition: transform 0.3s ease-in-out;
+  border-radius: 6px;
 }
 
 .overlay {
@@ -20,12 +21,15 @@
   justify-content: center;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  border-radius: 6px;
 }
 
 .container:hover .image {
   transform: scale(1.1);
+  border-radius: 6px;
 }
 
 .container:hover .overlay {
   opacity: 1;
+  border-radius: 6px;
 }

@@ -1,15 +1,13 @@
-import './feactured.css'
+// import './feactured.css'
 const FeacturedSection = () => {
     return (
         <div className="">
-            <div>
-                <h2 className='text-center text-primary text-2xl font-semibold mt-24'>KEY FEATURED</h2>
-                <hr />
-
+            <div className="text-center">
+                <h2 className='text-center text-primary text-2xl font-bold mt-24 border-b-8 border-primary'>KEY FEATURED</h2>
             </div>
 
-            <div className="mt-10   grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-                <div className=" card   card-compact w-96 bg-base-100 shadow-xl  ">
+            <div className="mt-10 featured grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div className="feature card card-compact w-96 bg-base-100 shadow-xl  ">
                     <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Body Building</h2>
@@ -19,7 +17,7 @@ const FeacturedSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" card  card-compact w-96 bg-base-100 shadow-xl  ">
+                <div className="feature card  card-compact w-96 bg-base-100 shadow-xl  ">
                     <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Musculation</h2>
@@ -29,7 +27,7 @@ const FeacturedSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" card  card-compact w-96 bg-base-100 shadow-xl  ">
+                <div className="feature card  card-compact w-96 bg-base-100 shadow-xl  ">
                     <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Fitness Runing</h2>
@@ -39,7 +37,7 @@ const FeacturedSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" card   card-compact w-96 bg-base-100 shadow-xl  ">
+                <div className="feature card   card-compact w-96 bg-base-100 shadow-xl  ">
                     <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Musculation</h2>
@@ -50,7 +48,7 @@ const FeacturedSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" card   card-compact w-96 bg-base-100 shadow-xl  ">
+                <div className="feature card   card-compact w-96 bg-base-100 shadow-xl  ">
                     <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Weight Lifting</h2>
@@ -60,7 +58,7 @@ const FeacturedSection = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" card  card-compact w-96 bg-base-100 shadow-xl  ">
+                <div className="feature card  card-compact w-96 bg-base-100 shadow-xl  ">
                     <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Classic Yoga</h2>

@@ -10,7 +10,7 @@ const Banner = () => {
     return (
         <div className="carousel w-full">
             <div id="slide1" className="container carousel-item relative w-full">
-                <img src={ban1} className="image w-full" />
+                <img src={ban1} className="image rounded-md w-full" />
                 <div className="overlay absolute inset-0 bottom-10 flex-col  justify-center items-center">
                     <h2 className='lg:text-4xl font-bold uppercase'>Punctuality</h2>
                     <p className='lg:text-xl '>The only bad workout is the one that didnt happen</p>
@@ -34,7 +34,7 @@ const Banner = () => {
                 </div>
             </div>
             <div id="slide2" className="container carousel-item relative w-full">
-                <img src={ban2} className="w-full" />
+                <img src={ban2} className="image rounded-md w-full" />
                 <div className="overlay absolute top-1/2 flex-col text-center justify-center items-center">
                     <h2 className='text-lg lg:text-4xl font-bold uppercase'>aptitude</h2>
                     <p className='text-lg lg:text-xl '>Strive for progress, not perfection</p>
@@ -58,7 +58,7 @@ const Banner = () => {
                 </div>
             </div>
             <div id="slide3" className=" container carousel-item relative w-full">
-                <img src={ban3} className="w-full" />
+                <img src={ban3} className="image rounded-md w-full" />
                 <div className="overlay absolute inset-0 bottom-10 flex-col justify-center items-center">
                     <h2 className='text-lg lg:text-4xl font-bold uppercase'>suitability</h2>
                     <p className=' text-lg lg:text-xl '>Your health is an investment, not an expense</p>

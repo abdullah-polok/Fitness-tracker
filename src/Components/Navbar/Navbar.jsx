@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 const Navbar = () => {
     const navlinks = <>
-        <li><Link to={'/'}>Home</Link></li>
-        <li><Link to={'/gallery'}>Gallery</Link></li>
-        <li><Link to={'/trainer'}>Trainer</Link></li>
-        <li><Link to={'/classes'}>Classes</Link></li>
-        <li><Link to={'/dashboard'}>Dashboard</Link></li>
+        <li><NavLink to={'/'}>Home</NavLink></li>
+        <li><NavLink to={'/gallery'}>Gallery</NavLink></li>
+        <li><NavLink to={'/trainer'}>Trainer</NavLink></li>
+        <li><NavLink to={'/classes'}>Classes</NavLink></li>
+        <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
     </>
     return (
         <div className="navbar rounded-xl p-4">
@@ -21,7 +21,7 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">FitnessTracker</a>
+                <a className="btn btn-ghost normal-case text-xl font-extrabold">FitnessTracker</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="font-semibold menu menu-horizontal px-1">
@@ -30,10 +30,10 @@ const Navbar = () => {
                     }
                 </ul>
             </div>
-            <div className="navbar-end">
-                <ul className="flex gap-5 font-semibold">
-                    <li><Link to={'/login'}>Login</Link></li>
-                    <li><Link to={'/login'}>Register</Link></li>
+            <div className="navbar-end ">
+                <ul className="flex gap-5 font-semibold items-center">
+                    <li><Link to={'/login'}>LOG IN</Link></li>
+                    <li className="text-white rounded-md p-2 bg-[#021431]" ><Link to={'/login'}>SIGN UP</Link></li>
                 </ul>
             </div>
         </div>
