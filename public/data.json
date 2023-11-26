@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Tracker1",
+        "title": "Fitness Pro 2000",
+        "price": 99.99,
+        "description": "An advanced fitness tracker with heart rate monitoring, GPS, and sleep tracking features.",
+        "image": "https://i.ibb.co/rGbNJs0/Men-s-tank-top.jpg"
+    },
+    {
+        "name": "Tracker2",
+        "title": "SlimFit Plus",
+        "price": 79.99,
+        "description": "A sleek and lightweight fitness tracker that monitors steps, calories, and distance traveled.",
+        "image": "https://i.ibb.co/MCbFwDF/c870x524.jpg"
+    },
+    {
+        "name": "Tracker3",
+        "title": "PowerFlex HR",
+        "price": 129.99,
+        "description": "A high-performance fitness tracker with advanced heart rate monitoring and workout analytics.",
+        "image": "https://i.ibb.co/WxsTfbx/images.png"
+    },
+    {
+        "name": "Tracker4",
+        "title": "ActiveLife 3000",
+        "price": 89.99,
+        "description": "A versatile fitness tracker suitable for various activities, including running, cycling, and swimming.",
+        "image": "https://i.ibb.co/hsGPNYt/older-couple-hiking.png"
+    },
+    {
+        "name": "Tracker5",
+        "title": "SmartRun X3",
+        "price": 149.99,
+        "description": "An intelligent fitness tracker with a large touchscreen display, smart notifications, and multi-sport tracking.",
+        "image": "https://i.ibb.co/2Sk9wDy/SR-model3-f103edb4-c9c6-4527-bbec-67999c89104b-1200x1200.png"
+    },
+    {
+        "name": "Tracker6",
+        "title": "FlexiFit Lite",
+        "price": 59.99,
+        "description": "An affordable and user-friendly fitness tracker for everyday activity monitoring and fitness goals.",
+        "image": "https://i.ibb.co/Qf8fnsg/gseem-Mx7o-Sweqy-YAuq-WDt-F-1200-80.jpg"
+    }
+]
