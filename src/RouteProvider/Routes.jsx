@@ -4,6 +4,7 @@ import {
 import Main from "../Layout/Main";
 import GallerySection from "../Pages/Gallery/GallerySection.jsx/GallerySection";
 import Home from "../Pages/Home/Home/Home";
+import Trainer from "../Pages/Trainer/Trainer";
 
 export const router = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
             }, {
                 path: '/gallery',
                 element: <GallerySection></GallerySection>
+            },
+            {
+                path: '/trainer',
+                element: <Trainer></Trainer>
             }
         ]
     }
