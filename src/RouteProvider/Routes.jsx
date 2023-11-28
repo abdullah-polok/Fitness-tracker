@@ -1,6 +1,7 @@
 import {
     createBrowserRouter,
 } from "react-router-dom";
+import Dashboard from "../Layout/Dashboard";
 import Main from "../Layout/Main";
 import BeATrainer from "../Pages/BeATrainer/BeATrainer";
 import ClassDetails from "../Pages/Classes/ClassDetails";
@@ -60,5 +61,15 @@ export const router = createBrowserRouter([
                 element: <Login></Login>
             }
         ]
+    },
+    {
+        path: 'dashboard',
+        element: <Dashboard></Dashboard>,
+        children: [
+            {
+
+            }
+        ]
+
     }
 ])

@@ -7,8 +7,36 @@ const Register = () => {
 
     const [registerError, setRegisterError] = useState('')
     const userInfo = useContext(AuthContext)
-    const { createUser } = userInfo
+    const { createUser, googleSignIn } = userInfo
     const navigate = useNavigate()
+
+
+    const handlePopUp = () => {
+        googleSignIn()
+            .then(user => {
+                console.log(user.user)
+                const userpop = { name: user.user.displayName, email: user.user.email }
+                console.log(userpop)
+                ////post user data into mongodb database
+                fetch(`http://localhost:5000/users`, {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(userpop)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                    })
+
+                navigate('/')
+            })
+            .catch(err => {
+                console.log(err.message)
+            })
+    }
+
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -52,6 +80,21 @@ const Register = () => {
 
                 //Reset login form
                 e.target.reset();
+                const user = { name: name, email: email }
+
+                ////post user data into mongodb database
+                fetch(`http://localhost:5000/users`, {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(user)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                    })
+
 
                 ///Navigate to Home 
                 navigate('/')
@@ -97,7 +140,7 @@ const Register = () => {
                                 <ToastContainer></ToastContainer>
                             </div>
                         </form>
-
+                        <button className="btn bg-red-400 mx-4" onClick={handlePopUp}><span className="text-white">Register via Google</span></button>
                         <p className="p-5">Have a account?<Link to={'/login'} className="text-blue-500">Login</Link></p>
                     </div>
                 </div>
