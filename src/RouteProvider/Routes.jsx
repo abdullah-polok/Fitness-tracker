@@ -7,6 +7,8 @@ import ClassDetails from "../Pages/Classes/ClassDetails";
 import Classes from "../Pages/Classes/Classes";
 import GallerySection from "../Pages/Gallery/GallerySection.jsx/GallerySection";
 import Home from "../Pages/Home/Home/Home";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
 import Trainer from "../Pages/Trainer/Trainer";
 import TrainerDetails from "../Pages/Trainer/TrainerDetails";
 import TrainerBook from "../Pages/TrainerBookPage/TrainerBook";
@@ -48,6 +50,14 @@ export const router = createBrowserRouter([
                 path: '/classdetails/:id',
                 element: <ClassDetails></ClassDetails>,
                 loader: ({ params }) => fetch(`http://localhost:5000/classes/${params.id}`)
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
             }
         ]
     }
