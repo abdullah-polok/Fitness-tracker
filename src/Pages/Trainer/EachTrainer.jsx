@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 const EachTrainer = ({ train }) => {
     const { _id, trainer_name, profile_image, available_time, years_of_experience, social_icons } = train
-    console.log(train)
+    // console.log(train)
     return (
         <div className="card w-64 bg-base-100 shadow-xl">
             <figure><img className="w-64 h-64" src={profile_image} alt="Shoes" /></figure>

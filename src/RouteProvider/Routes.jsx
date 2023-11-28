@@ -13,6 +13,7 @@ import Register from "../Pages/Register/Register";
 import Trainer from "../Pages/Trainer/Trainer";
 import TrainerDetails from "../Pages/Trainer/TrainerDetails";
 import TrainerBook from "../Pages/TrainerBookPage/TrainerBook";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
     {
@@ -32,16 +33,16 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/trainerdetails/:id',
-                element: <TrainerDetails></TrainerDetails>,
+                element: <PrivateRoutes><TrainerDetails></TrainerDetails></PrivateRoutes>,
                 loader: ({ params }) => fetch(`http://localhost:5000/trainers/${params.id}`)
             },
             {
                 path: '/becometrainer',
-                element: <BeATrainer></BeATrainer>
+                element: <PrivateRoutes><BeATrainer></BeATrainer></PrivateRoutes>
             },
             {
                 path: '/trainerbook',
-                element: <TrainerBook></TrainerBook>
+                element: <PrivateRoutes><TrainerBook></TrainerBook></PrivateRoutes>
             },
             {
                 path: '/classes',
@@ -49,7 +50,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/classdetails/:id',
-                element: <ClassDetails></ClassDetails>,
+                element: <PrivateRoutes><ClassDetails></ClassDetails></PrivateRoutes>,
                 loader: ({ params }) => fetch(`http://localhost:5000/classes/${params.id}`)
             },
             {
@@ -64,7 +65,7 @@ export const router = createBrowserRouter([
     },
     {
         path: 'dashboard',
-        element: <Dashboard></Dashboard>,
+        element: <PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>,
         children: [
             {
 
