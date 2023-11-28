@@ -15,7 +15,7 @@ const Register = () => {
         googleSignIn()
             .then(user => {
                 console.log(user.user)
-                const userpop = { name: user.user.displayName, email: user.user.email }
+                const userpop = { name: user.user.displayName, email: user.user.email, role: "memeber" }
                 console.log(userpop)
                 ////post user data into mongodb database
                 fetch(`http://localhost:5000/users`, {
@@ -80,7 +80,7 @@ const Register = () => {
 
                 //Reset login form
                 e.target.reset();
-                const user = { name: name, email: email }
+                const user = { name: name, email: email, role: "memeber" }
 
                 ////post user data into mongodb database
                 fetch(`http://localhost:5000/users`, {

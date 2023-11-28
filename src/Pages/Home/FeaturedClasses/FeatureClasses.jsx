@@ -12,7 +12,7 @@ const FeatureClasses = () => {
             .then(res => res.json())
             .then(data => setClasses(data))
     }, [])
-    console.log(classes)
+    // console.log(classes)
     return (
         <div className="mt-24">
             <div className="text-center">

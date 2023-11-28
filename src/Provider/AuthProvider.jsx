@@ -8,6 +8,7 @@ const auth = getAuth(app)
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [checkEmail, setCheckMail] = useState('')
     const googleProvider = new GoogleAuthProvider();
 
 
@@ -47,10 +48,11 @@ const AuthProvider = ({ children }) => {
         signIn,
         googleSignIn,
         logOut,
+        checkEmail, setCheckMail
 
     }
 
-
+    // console.log(checkEmail)
 
     return (
         <AuthContext.Provider value={authInfo}>

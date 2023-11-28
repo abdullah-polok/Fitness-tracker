@@ -5,8 +5,8 @@ import emptyImg from '../../assets/images/istockphoto-1210939712-612x612.jpg'
 const Navbar = () => {
     const userInfo = useContext(AuthContext)
     const { user, logOut } = userInfo
-    console.log(user?.photoURL
-    )
+    // console.log(user?.photoURL
+    // )
     const navlinks = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/gallery'}>Gallery</NavLink></li>

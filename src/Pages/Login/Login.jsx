@@ -7,14 +7,45 @@ import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
     const [loginMes, setLoginMes] = useState('')
     const userInfo = useContext(AuthContext)
-    const { signIn, googleSignIn } = userInfo
-
+    const { signIn, googleSignIn, checkEmail, setCheckMail } = userInfo
 
     const navigate = useNavigate()
     const handlePopUp = () => {
         googleSignIn()
             .then(user => {
-                console.log(user.user)
+                // console.log(user.user)
+                const userpop = { name: user.user.displayName, email: user.user.email, role: "memeber" }
+                // console.log(userpop)
+                ////post user data into mongodb database
+
+                fetch(`http://localhost:5000/users/${user.user.email}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        // console.log(data)
+                        setCheckMail(data)
+                    })
+
+                // setTimeout(10000)
+                ///check email not availble in data base
+                ///if not availble then post into database
+                if (checkEmail.email === userpop.email) {
+                    console.log("User already exist")
+                    toast("User already exist")
+                }
+
+                else {
+                    fetch(`http://localhost:5000/users`, {
+                        method: 'POST',
+                        headers: {
+                            'content-type': 'application/json'
+                        },
+                        body: JSON.stringify(userpop)
+                    })
+                        .then(res => res.json())
+                        .then(data => {
+                            console.log(data)
+                        })
+                }
                 navigate('/')
             })
             .catch(err => {
