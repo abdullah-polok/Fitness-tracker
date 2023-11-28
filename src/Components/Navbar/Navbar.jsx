@@ -1,6 +1,12 @@
 import { Link, NavLink } from "react-router-dom"
-
+import { AuthContext } from "../../Provider/AuthProvider";
+import { useContext } from 'react'
+import emptyImg from '../../assets/images/istockphoto-1210939712-612x612.jpg'
 const Navbar = () => {
+    const userInfo = useContext(AuthContext)
+    const { user, logOut } = userInfo
+    console.log(user?.photoURL
+    )
     const navlinks = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/gallery'}>Gallery</NavLink></li>
@@ -8,6 +14,10 @@ const Navbar = () => {
         <li><NavLink to={'/classes'}>Classes</NavLink></li>
         <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
     </>
+
+    const handleUser = () => {
+        logOut()
+    }
     return (
         <div className="navbar rounded-xl p-4">
             <div className="navbar-start">
@@ -32,8 +42,22 @@ const Navbar = () => {
             </div>
             <div className="navbar-end ">
                 <ul className="flex gap-5 font-semibold items-center">
-                    <li><Link to={'/login'}>LOG IN</Link></li>
-                    <li className="text-white rounded-md p-2 bg-primary" ><Link to={'/register'}>SIGN UP</Link></li>
+                    {
+                        user ? <div className="flex ite gap-2">
+                            <div className="avatar placeholder">
+                                <div className="bg-neutral text-neutral-content rounded-full w-8">
+                                    <img className="avatar rou" src={user?.photoURL ? user.photoURL : emptyImg} />
+                                </div>
+                            </div>
+                            <li className="text-white rounded-md p-2 bg-primary text-sm"><Link onClick={handleUser}>Log Out</Link></li>
+
+                        </div>
+                            :
+                            <>
+                                <li><Link to={'/login'}>LOG IN</Link></li>
+                                <li className="text-white rounded-md p-2 bg-primary" ><Link to={'/register'}>SIGN UP</Link></li>
+                            </>
+                    }
                 </ul>
             </div>
         </div>
