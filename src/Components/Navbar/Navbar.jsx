@@ -33,7 +33,7 @@ const Navbar = () => {
             <div className="navbar-end ">
                 <ul className="flex gap-5 font-semibold items-center">
                     <li><Link to={'/login'}>LOG IN</Link></li>
-                    <li className="text-white rounded-md p-2 bg-[#021431]" ><Link to={'/login'}>SIGN UP</Link></li>
+                    <li className="text-white rounded-md p-2 bg-primary" ><Link to={'/login'}>SIGN UP</Link></li>
                 </ul>
             </div>
         </div>
