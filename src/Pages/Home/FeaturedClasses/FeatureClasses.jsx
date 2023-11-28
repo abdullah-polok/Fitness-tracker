@@ -8,7 +8,7 @@ import { FreeMode, Pagination } from 'swiper/modules';
 const FeatureClasses = () => {
     const [classes, setClasses] = useState([])
     useEffect(() => {
-        fetch('data.json')
+        fetch('http://localhost:5000/classes')
             .then(res => res.json())
             .then(data => setClasses(data))
     }, [])

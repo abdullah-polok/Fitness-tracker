@@ -3,6 +3,8 @@ import {
 } from "react-router-dom";
 import Main from "../Layout/Main";
 import BeATrainer from "../Pages/BeATrainer/BeATrainer";
+import ClassDetails from "../Pages/Classes/ClassDetails";
+import Classes from "../Pages/Classes/Classes";
 import GallerySection from "../Pages/Gallery/GallerySection.jsx/GallerySection";
 import Home from "../Pages/Home/Home/Home";
 import Trainer from "../Pages/Trainer/Trainer";
@@ -37,6 +39,15 @@ export const router = createBrowserRouter([
             {
                 path: '/trainerbook',
                 element: <TrainerBook></TrainerBook>
+            },
+            {
+                path: '/classes',
+                element: <Classes></Classes>
+            },
+            {
+                path: '/classdetails/:id',
+                element: <ClassDetails></ClassDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/classes/${params.id}`)
             }
         ]
     }
