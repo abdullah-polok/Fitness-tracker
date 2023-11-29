@@ -25,10 +25,9 @@ const Login = () => {
                         setCheckMail(data)
                     })
 
-                // setTimeout(10000)
                 ///check email not availble in data base
                 ///if not availble then post into database
-                if (checkEmail.email === userpop.email) {
+                if (checkEmail?.email === userpop?.email) {
                     console.log("User already exist")
                     toast("User already exist")
                 }
@@ -62,13 +61,12 @@ const Login = () => {
         const email = form.email.value
         const password = form.password.value
 
-        console.log(email, password)
-
         signIn(email, password)
             .then(res => {
                 // console.log(res.user)
                 const userlog = { name: res?.user?.displayName, email: res?.user?.email }
                 setCheckMail(userlog)
+                // console.log(userlog)
                 e.target.reset()
                 navigate('/')
 

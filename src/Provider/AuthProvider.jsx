@@ -10,9 +10,8 @@ const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const [checkEmail, setCheckMail] = useState('')
     const googleProvider = new GoogleAuthProvider();
-    let [isAdmin, setIsAdmin] = useState(false)
-    const [alluser, setallUser] = useState([])
-    const [adminmail, setadminmail] = useState('')
+    const [role, setRole] = useState('')
+
     const createUser = (email, password) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
@@ -45,22 +44,7 @@ const AuthProvider = ({ children }) => {
         }
     }, [])
 
-    useEffect(() => {
-        fetch('http://localhost:5000/users')
-            .then(res => res.json())
-            .then(data => {
-                setallUser(data)
-            })
-    }, [])
 
-    useEffect(() => {
-        fetch(' http://localhost:5000/adminadmin')
-            .then(res => res.json())
-            .then(data => {
-                const temmail = data[0]?.email
-                setadminmail(temmail)
-            })
-    }, [])
 
     // const exactemail = alluser.filter(user => user.role === "admin")
 
@@ -76,11 +60,10 @@ const AuthProvider = ({ children }) => {
         googleSignIn,
         logOut,
         checkEmail, setCheckMail,
-        isAdmin, setIsAdmin,
-        alluser, setallUser,
-        adminmail
+        role, setRole
     }
 
+    // console.log("Role data", role)
 
     // console.log("CHeck mail is ", checkEmail?.email)
     // console.log("Admin mail is ", adminmail)

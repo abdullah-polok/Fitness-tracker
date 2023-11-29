@@ -28,6 +28,7 @@ const Register = () => {
                     .then(res => res.json())
                     .then(data => {
                         console.log(data)
+                        setCheckMail(userpop)
                     })
 
                 navigate('/')
@@ -45,7 +46,8 @@ const Register = () => {
         const email = form.email.value
         const password = form.password.value
         const photoURL = form.photoURL.value
-        console.log(email, password)
+        const wantToBe = form.wantToBe.value
+        console.log(email, password, wantToBe)
 
         ///Check password length
         if (password.length < 6) {
@@ -73,6 +75,7 @@ const Register = () => {
 
             return;
         }
+        const user = { name: name, email: email, role: wantToBe }
         createUser(email, password)
             .then(res => {
                 console.log(res.user)
@@ -80,7 +83,6 @@ const Register = () => {
 
                 //Reset login form
                 e.target.reset();
-                const user = { name: name, email: email, role: "memeber" }
 
                 ////post user data into mongodb database
                 fetch(`http://localhost:5000/users`, {
@@ -93,6 +95,7 @@ const Register = () => {
                     .then(res => res.json())
                     .then(data => {
                         console.log(data)
+                        setCheckMail(user)
                     })
 
 
@@ -128,6 +131,16 @@ const Register = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input type="password" name="password" placeholder="password" className="input w-full " required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Want to be </span>
+                                </label>
+                                <select name="wantToBe" className="select select-info w-full max-w-xs">
+                                    <option disabled selected>Select your choice</option>
+                                    <option>trainer</option>
+                                    <option>member</option>
+                                </select>
                             </div>
                             <div className="form-control">
                                 <label className="label">
