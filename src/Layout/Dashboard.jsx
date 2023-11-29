@@ -33,11 +33,16 @@ const Dashboard = () => {
                         </>
                     }
                     {role?.role === "trainer" && <>
-                        <h3>Trainer</h3>
+                        <li className="shadow-md shadow-black"><Link to='/dashboard/addnewclass'>Add new class</Link></li>
+                        <li className="shadow-md shadow-black"><Link to='/dashboard/addnewforum'>Add new forum</Link></li>
+                        <li className="shadow-md shadow-black"><Link to='/dashboard/managemember'>Manage member</Link></li>
+                        <li className="shadow-md shadow-black"><Link to='/dashboard/manageslots'>Manage slots</Link></li>
                     </>}
                     {
                         role?.role === "member" && <>
-                            <h3>Member</h3>
+                            <li className="shadow-md shadow-black"><Link to='/dashboard/activityLog'>Activity log</Link></li>
+                            <li className="shadow-md shadow-black"><Link to='/dashboard/profilesettings'>Profile settings</Link></li>
+                            <li className="shadow-md shadow-black"><Link to='/dashboard/recommandedclass'>Recommanded class</Link></li>
                         </>
                     }
 
