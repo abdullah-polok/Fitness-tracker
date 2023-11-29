@@ -66,7 +66,9 @@ const Login = () => {
 
         signIn(email, password)
             .then(res => {
-                console.log(res.user)
+                // console.log(res.user)
+                const userlog = { name: res?.user?.displayName, email: res?.user?.email }
+                setCheckMail(userlog)
                 e.target.reset()
                 navigate('/')
 

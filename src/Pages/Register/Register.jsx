@@ -7,7 +7,7 @@ const Register = () => {
 
     const [registerError, setRegisterError] = useState('')
     const userInfo = useContext(AuthContext)
-    const { createUser, googleSignIn } = userInfo
+    const { createUser, googleSignIn, checkEmail, setCheckMail } = userInfo
     const navigate = useNavigate()
 
 
@@ -16,7 +16,7 @@ const Register = () => {
             .then(user => {
                 console.log(user.user)
                 const userpop = { name: user.user.displayName, email: user.user.email, role: "memeber" }
-                console.log(userpop)
+                // console.log(userpop)
                 ////post user data into mongodb database
                 fetch(`http://localhost:5000/users`, {
                     method: 'POST',

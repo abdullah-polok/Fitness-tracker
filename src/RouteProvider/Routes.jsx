@@ -6,6 +6,9 @@ import Main from "../Layout/Main";
 import BeATrainer from "../Pages/BeATrainer/BeATrainer";
 import ClassDetails from "../Pages/Classes/ClassDetails";
 import Classes from "../Pages/Classes/Classes";
+import AllSubscribers from "../Pages/Dashboard/AllSubscribers/AllSubscribers";
+import AllTrainers from "../Pages/Dashboard/AllTrainers/AllTrainers";
+import AppliedTrainer from "../Pages/Dashboard/AppliedTrainer/AppliedTrainer";
 import GallerySection from "../Pages/Gallery/GallerySection.jsx/GallerySection";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
@@ -68,7 +71,16 @@ export const router = createBrowserRouter([
         element: <PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>,
         children: [
             {
-
+                path: 'allSubscribers',
+                element: <AllSubscribers></AllSubscribers>
+            },
+            {
+                path: 'allTrainers',
+                element: <AllTrainers></AllTrainers>
+            },
+            {
+                path: 'appliedTrainer',
+                element: <AppliedTrainer></AppliedTrainer>
             }
         ]
 

@@ -10,9 +10,9 @@ const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
     const [checkEmail, setCheckMail] = useState('')
     const googleProvider = new GoogleAuthProvider();
-
-
-
+    let [isAdmin, setIsAdmin] = useState(false)
+    const [alluser, setallUser] = useState([])
+    const [adminmail, setadminmail] = useState('')
     const createUser = (email, password) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
@@ -32,6 +32,9 @@ const AuthProvider = ({ children }) => {
         setLoading(true);
         return signOut(auth);
     }
+
+
+
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             setUser(currentUser);
@@ -41,6 +44,30 @@ const AuthProvider = ({ children }) => {
             return unsubscribe();
         }
     }, [])
+
+    useEffect(() => {
+        fetch('http://localhost:5000/users')
+            .then(res => res.json())
+            .then(data => {
+                setallUser(data)
+            })
+    }, [])
+
+    useEffect(() => {
+        fetch(' http://localhost:5000/adminadmin')
+            .then(res => res.json())
+            .then(data => {
+                const temmail = data[0]?.email
+                setadminmail(temmail)
+            })
+    }, [])
+
+    // const exactemail = alluser.filter(user => user.role === "admin")
+
+    // if (checkEmail?.email === adminmail) {
+    //     console.log(`Email match with admin email,email is`, adminmail)
+    // }
+
     const authInfo = {
         user,
         loading,
@@ -48,11 +75,16 @@ const AuthProvider = ({ children }) => {
         signIn,
         googleSignIn,
         logOut,
-        checkEmail, setCheckMail
-
+        checkEmail, setCheckMail,
+        isAdmin, setIsAdmin,
+        alluser, setallUser,
+        adminmail
     }
 
-    // console.log(checkEmail)
+
+    // console.log("CHeck mail is ", checkEmail?.email)
+    // console.log("Admin mail is ", adminmail)
+
 
     return (
         <AuthContext.Provider value={authInfo}>
