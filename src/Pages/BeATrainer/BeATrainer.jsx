@@ -17,7 +17,7 @@ const BeATrainer = () => {
         const trainInfo = { trainer_name, age, skills, available_time, profile_image }
 
         // console.log(trainInfo)
-        fetch(`http://localhost:5000/trainers`, {
+        fetch(`https://assignment-12-server-one-psi.vercel.app/trainers`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

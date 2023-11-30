@@ -8,7 +8,7 @@ const FeacturedSection = () => {
 
             <div className="mt-10 featured grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 <div className="feature card card-compact w-96 bg-base-100 shadow-xl  ">
-                    <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" /></figure>
+
                     <div className="card-body">
                         <h2 className="card-title">Body Building</h2>
                         <p>The largest selection fitness articles exercises workouts, supplements, & community to help you reach your goals!</p>
@@ -18,7 +18,7 @@ const FeacturedSection = () => {
                     </div>
                 </div>
                 <div className="feature card  card-compact w-96 bg-base-100 shadow-xl  ">
-                    <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" /></figure>
+
                     <div className="card-body">
                         <h2 className="card-title">Musculation</h2>
                         <p>The largest selection fitness articles exercises workouts, supplements, & community to help you reach your goals!</p>
@@ -28,7 +28,7 @@ const FeacturedSection = () => {
                     </div>
                 </div>
                 <div className="feature card  card-compact w-96 bg-base-100 shadow-xl  ">
-                    <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" /></figure>
+
                     <div className="card-body">
                         <h2 className="card-title">Fitness Runing</h2>
                         <p>How to park your car at your garage?</p>
@@ -38,7 +38,7 @@ const FeacturedSection = () => {
                     </div>
                 </div>
                 <div className="feature card   card-compact w-96 bg-base-100 shadow-xl  ">
-                    <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" /></figure>
+
                     <div className="card-body">
                         <h2 className="card-title">Musculation</h2>
                         <p>The largest selection fitness articles exercises
@@ -49,7 +49,7 @@ const FeacturedSection = () => {
                     </div>
                 </div>
                 <div className="feature card   card-compact w-96 bg-base-100 shadow-xl  ">
-                    <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" /></figure>
+
                     <div className="card-body">
                         <h2 className="card-title">Weight Lifting</h2>
                         <p>The largest selection fitness articles exercises workouts, supplements, & community to help you reach your goals!</p>
@@ -59,7 +59,7 @@ const FeacturedSection = () => {
                     </div>
                 </div>
                 <div className="feature card  card-compact w-96 bg-base-100 shadow-xl  ">
-                    <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!" /></figure>
+
                     <div className="card-body">
                         <h2 className="card-title">Classic Yoga</h2>
                         <p>The largest selection fitness articles exercises workouts, supplements, & community to help you reach your goals!</p>

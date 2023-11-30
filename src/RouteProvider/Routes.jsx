@@ -44,7 +44,7 @@ export const router = createBrowserRouter([
             {
                 path: '/trainerdetails/:id',
                 element: <PrivateRoutes><TrainerDetails></TrainerDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/trainers/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-12-server-one-psi.vercel.app/trainers/${params.id}`)
             },
             {
                 path: '/becometrainer',
@@ -61,7 +61,7 @@ export const router = createBrowserRouter([
             {
                 path: '/classdetails/:id',
                 element: <PrivateRoutes><ClassDetails></ClassDetails></PrivateRoutes>,
-                loader: ({ params }) => fetch(`http://localhost:5000/classes/${params.id}`)
+                loader: ({ params }) => fetch(`https://assignment-12-server-one-psi.vercel.app/classes/${params.id}`)
             },
             {
                 path: '/register',

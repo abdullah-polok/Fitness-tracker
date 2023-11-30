@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Trainer = () => {
     const [trainer, setTrainer] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/trainers')
+        fetch('https://assignment-12-server-one-psi.vercel.app/trainers')
             .then(res => res.json())
             .then(data => setTrainer(data))
     }, [])

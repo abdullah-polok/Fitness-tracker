@@ -10,7 +10,7 @@ const Dashboard = () => {
     const emailPrimary = user?.email
 
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${emailPrimary}`)
+        fetch(`https://assignment-12-server-one-psi.vercel.app/users/${emailPrimary}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)

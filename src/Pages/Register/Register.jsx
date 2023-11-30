@@ -18,7 +18,7 @@ const Register = () => {
                 const userpop = { name: user.user.displayName, email: user.user.email, role: "memeber" }
                 // console.log(userpop)
                 ////post user data into mongodb database
-                fetch(`http://localhost:5000/users`, {
+                fetch(`https://assignment-12-server-one-psi.vercel.app/users`, {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -85,7 +85,7 @@ const Register = () => {
                 e.target.reset();
 
                 ////post user data into mongodb database
-                fetch(`http://localhost:5000/users`, {
+                fetch(`https://assignment-12-server-one-psi.vercel.app/users`, {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

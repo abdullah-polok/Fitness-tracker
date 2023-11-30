@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
     const [loginMes, setLoginMes] = useState('')
     const userInfo = useContext(AuthContext)
-    const { signIn, googleSignIn, checkEmail, setCheckMail } = userInfo
+    const { user, signIn, googleSignIn, checkEmail, setCheckMail } = userInfo
 
     const navigate = useNavigate()
     const handlePopUp = () => {
@@ -18,7 +18,7 @@ const Login = () => {
                 // console.log(userpop)
                 ////post user data into mongodb database
 
-                fetch(`http://localhost:5000/users/${user.user.email}`)
+                fetch(`https://assignment-12-server-one-psi.vercel.app/users/${user.user.email}`)
                     .then(res => res.json())
                     .then(data => {
                         // console.log(data)
@@ -33,7 +33,7 @@ const Login = () => {
                 }
 
                 else {
-                    fetch(`http://localhost:5000/users`, {
+                    fetch(`https://assignment-12-server-one-psi.vercel.app/users`, {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'
