@@ -1,3 +1,20 @@
+
+# About my project
+
+- used Tailwind and bootstrap 5
+- used  react-router
+- used daisyUI tailwind component library
+- Used React Express for server
+- Used MongoDB database for storing data
+
+
+# Live website
+ https://simple-firebase-17e01.web.app/
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
