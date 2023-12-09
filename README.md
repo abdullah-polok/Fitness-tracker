@@ -9,7 +9,7 @@
 
 
 # Live website
- https://simple-firebase-17e01.web.app/
+ - https://fitnesstracker-624bc.web.app/
 
 
 
