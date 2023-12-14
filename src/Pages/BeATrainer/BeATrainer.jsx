@@ -1,6 +1,8 @@
-
+import { AuthContext } from "../../Provider/AuthProvider";
+import { useContext } from 'react'
 const BeATrainer = () => {
     // const { trainer_name, profile_image, years_of_experience, social_icons, available_time } = trainer
+    const { user } = useContext(AuthContext)
     const handleTrainerForm = (e) => {
         e.preventDefault()
         const form = e.target;
@@ -39,7 +41,7 @@ const BeATrainer = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" name='email' placeholder="email" defaultValue={"polok.jak"} readOnly className="input w-full border-2" required />
+                                <input type="email" name='email' placeholder="email" defaultValue={user?.email} readOnly className="input w-full border-2" required />
                             </div>
                             <div className="form-control mb-2">
                                 <label className="label">

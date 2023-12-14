@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import g1 from '../../../assets/images/gallery/edgar-chaparro-sHfo3WOgGTU-unsplash.jpg'
 import g2 from '../../../assets/images/gallery/filip-mroz-XCkRGOX2VgM-unsplash.jpg'
 import g3 from '../../../assets/images/gallery/greg-rakozy-47zOB-KHqko-unsplash.jpg'
@@ -26,135 +27,140 @@ import g25 from '../../../assets/images/gallery/walter-lee-olivares-de-la-cruz-E
 import g26 from '../../../assets/images/gallery/wesley-tingey-dlxNvA7pVwU-unsplash.jpg'
 const GallerySection = () => {
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g1} alt="" />
+        <div>
+            <Helmet>
+                <title>FitnessTraker | Gallery</title>
+            </Helmet>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g1} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g2} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g2} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g3} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g3} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g4} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g4} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g5} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g5} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g6} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g6} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g7} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g7} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g8} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g8} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g9} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g9} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g10} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g10} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g11} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g11} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g12} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g12} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g13} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g13} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g14} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g14} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g15} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g15} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g16} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g16} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g17} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g17} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g18} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g18} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g19} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g19} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g20} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g20} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g21} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g21} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g22} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g22} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g23} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g23} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g24} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g24} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g25} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g25} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="hero  bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <img src={g26} alt="" />
+                <div className="hero  bg-base-200">
+                    <div className="hero-content flex-col lg:flex-row-reverse">
+                        <img src={g26} alt="" />
+                    </div>
                 </div>
             </div>
         </div>

@@ -25,6 +25,8 @@ import ManagerSlots from "../Pages/Dashboard/Trainer/ManageSlots/ManagerSlots";
 import ActivityLog from "../Pages/Dashboard/Member/Activity Log/ActivityLog";
 import ProfileSettings from "../Pages/Dashboard/Member/Profile Settings/ProfileSettings";
 import RecommandClass from "../Pages/Dashboard/Member/RecommandClass/RecommandClass";
+import Error from "../Pages/Error/Error";
+import FitnessVideos from "../Pages/FitnessVideos/FitnessVideos";
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -70,6 +72,10 @@ export const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login></Login>
+            },
+            {
+                path: '/fitnessvideos',
+                element: <FitnessVideos></FitnessVideos>
             }
         ]
     },
@@ -118,5 +124,9 @@ export const router = createBrowserRouter([
             }
         ]
 
+    },
+    {
+        path: '*',
+        element: <Error></Error>
     }
 ])

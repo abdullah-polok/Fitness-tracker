@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import EachTrainer from "./EachTrainer";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 const Trainer = () => {
     const [trainer, setTrainer] = useState([])
     useEffect(() => {
@@ -10,6 +11,9 @@ const Trainer = () => {
     }, [])
     return (
         <div>
+            <Helmet>
+                <title>FitnessTraker | Trainer</title>
+            </Helmet>
             <div>
                 <h3 className="text-3xl text-primary font-semibold mt-4 border-b-8 border-primary">Choose Your Trainer</h3>
                 <div className=" mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">

@@ -49,7 +49,6 @@ const FeacturedSection = () => {
                     </div>
                 </div>
                 <div className="feature card   card-compact w-96 bg-base-100 shadow-xl  ">
-
                     <div className="card-body">
                         <h2 className="card-title">Weight Lifting</h2>
                         <p>The largest selection fitness articles exercises workouts, supplements, & community to help you reach your goals!</p>
@@ -59,7 +58,6 @@ const FeacturedSection = () => {
                     </div>
                 </div>
                 <div className="feature card  card-compact w-96 bg-base-100 shadow-xl  ">
-
                     <div className="card-body">
                         <h2 className="card-title">Classic Yoga</h2>
                         <p>The largest selection fitness articles exercises workouts, supplements, & community to help you reach your goals!</p>

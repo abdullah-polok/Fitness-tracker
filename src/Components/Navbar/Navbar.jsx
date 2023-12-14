@@ -13,6 +13,7 @@ const Navbar = () => {
         <li><NavLink to={'/trainer'}>Trainer</NavLink></li>
         <li><NavLink to={'/classes'}>Classes</NavLink></li>
         <li><NavLink to={'/dashboard'}>Dashboard</NavLink></li>
+        <li><NavLink to={'/fitnessvideos'}>Fitness Videos</NavLink></li>
     </>
 
     const handleUser = () => {
